@@ -2,7 +2,6 @@ import got from 'got'
 
 import chai from 'chai'
 const expect = chai.expect
-import Bourne from '@hapi/bourne'
 
 // importring this plugin for validation
 import chaiResponseValidator from 'chai-openapi-response-validator'
@@ -19,6 +18,37 @@ const validator = new ResponseValidator({
 
 
 describe('PET Store', () => {
+    let petId = String
+    it('adding new pet to the store',async () => {
+        const response = await axios.post(
+            'https://petstore.swagger.io/v2/pet',
+            {
+                'id': 0,
+                'category': {
+                    'id': 0,
+                    'name': 'newUniqueDog'
+                },
+                'name': 'jack',
+                'photoUrls': [
+                    'string'
+                ],
+                'tags': [
+                    {
+                        'id': 0,
+                        'name': 'best dog'
+                    }
+                ],
+                'status': 'available'
+            },
+            {
+                headers: {
+                    'accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            }
+        )
+        petId = response.data.id
+    })
 
     it('get pet data by id',async () => {
         const response = await got('https://petstore.swagger.io/v2/pet/findByStatus?status=available', {
