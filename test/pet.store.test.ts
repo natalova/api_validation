@@ -1,10 +1,12 @@
 import axios from 'axios'
 import chai from 'chai'
 const expect = chai.expect
+import path from 'path'
 
 // importring this plugin for validation
 import chaiResponseValidator from 'chai-openapi-response-validator'
-chai.use(chaiResponseValidator('/Users/denys.pavliuk/Documents/projects/ts-api-demo/doc/example.petstore.yaml'))
+const pathToSpec = path.resolve('3_0/petstore.yaml')
+chai.use(chaiResponseValidator(pathToSpec))
 
 describe('PET Store', () => {
     let petId = Number
