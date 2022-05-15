@@ -2,8 +2,8 @@
   "name": "ts-api-validation",
   "version": "1.0.0",
   "scripts": {
-    "pretest": "rm -rf 3_0 && npx go-git-it https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator/src/test/resources/3_0",
-    "test": "mocha --require ts-node/register ./test/**/*.ts"
+    "pretest": "rm -rf 3_0 mochawesome-report && npx go-git-it https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator/src/test/resources/3_0",
+    "test": "mocha --require ts-node/register ./test/**/*.ts --reporter mochawesome"
   },
   "author": "Denys Pavliuk",
   "dependencies": {
@@ -14,6 +14,7 @@
     "chai-openapi-response-validator": "^0.14.2",
     "go-git-it": "^1.0.0",
     "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3",
     "swagger2openapi": "^7.0.8",
     "ts-node": "^10.7.0",
     "typescript": "4.1.3"
