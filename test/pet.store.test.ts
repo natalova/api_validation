@@ -46,10 +46,9 @@ describe('PET Store', () => {
     it('validate response axios & chai-response',async () => {
         const res = await axios.get(`http://petstore.swagger.io/v2/pet/${petId}`,
         {headers: {'accept': 'application/json'}})
-        
+
         expect(res.status).to.equal(200)
         expect(res).to.satisfyApiSpec
-        let parsedD = JSON.stringify(res.data)
         let petNameFromResponse = String(jsonpath.query(res.data, "$.name"))
         expect(petNameFromResponse).to.equal(petName)
     })
