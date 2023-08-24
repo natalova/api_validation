@@ -8,11 +8,11 @@ let NewThree = 'World'
 //створити команду для виведення в консоль цих слів разом
 console.log (NewTwo, NewThree)
 
-//чи вірно оголошена перевірка типу даних і якщо ні - то змінити на вірний варіан
-let NewFour = 'value1'
-console.log (typeof NewFour)
+//чи вірно оголошена перевірка типу даних - і якщо ні - то змінити на вірний варіан
+let myVariable = 'value'
+console.log (typeof myVariable)
 
 //чи вірно оголошений код для отримання значення іншої змінної
-let NewFive = 'value2'
-let NewSix = `hello ${NewFive}`
-console.log (NewSix)
+let name = 'value2'
+let NewFour = `hello ${name}`
+console.log (NewFour)
