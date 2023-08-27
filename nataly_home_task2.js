@@ -17,7 +17,7 @@ console.log (New3)
 
 
 // 4 - Create another variable with few words and contain 'let1'. use method replace to word 'BANG'
-let New4 = 'let1'
+let New4 = 'let1 test 4'
 New4 = New4.replace ('let1', 'BANG') 
 console.log (New4)
 
