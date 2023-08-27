@@ -5,7 +5,7 @@ x *= y
 console.log (x)
 
 
-// 2 -create new variable 'let1' in lower case.
+// 2 -create new variable 'let1' in lower case
 let New3 = 'let1'
 New3 = New3.toLocaleLowerCase() 
 console.log (New3)
